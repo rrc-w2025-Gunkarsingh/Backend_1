@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "start": "ts-node src/server.ts", 
+    "start": "ts-node src/server.ts",
     "dev": "ts-node src/server.ts"
   },
   "repository": {
@@ -22,7 +22,12 @@
   "homepage": "https://github.com/rrc-w2025-Gunkarsingh/Backend_1#readme",
   "devDependencies": {
     "@types/express": "^5.0.6",
+    "@types/jest": "^30.0.0",
     "@types/node": "^25.0.6",
+    "@types/supertest": "^6.0.3",
+    "jest": "^30.2.0",
+    "supertest": "^7.2.2",
+    "ts-jest": "^29.4.6",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
   },
