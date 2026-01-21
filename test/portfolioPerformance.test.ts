@@ -1,9 +1,6 @@
 import { calculatePortfolioPerformance } from "../src/portfolio/portfolioPerformance";
-
 /**
  * Test suite for the calculatePortfolioPerformance function.
- * This suite validates that the function returns correct summary messages
- * based on different portfolio gain and loss scenarios.
  */
 describe("calculatePortfolioPerformance", () => {
 
@@ -14,9 +11,6 @@ describe("calculatePortfolioPerformance", () => {
         );
     });
 
-    /**
-     * Verifies that a positive gain below 30% returns a
-     */
     it("should return modest gain for gains between 0 and 30%", () => {
         const result = calculatePortfolioPerformance(10000, 11000);
         expect(result.performanceSummary).toBe(
@@ -29,8 +23,6 @@ describe("calculatePortfolioPerformance", () => {
             "No change. Your portfolio is holding steady."
         );
     });
-
-   
     it("should return significant loss for losses <= -10%", () => {
         const result = calculatePortfolioPerformance(10000, 8999.9);
         expect(result.performanceSummary).toBe(
