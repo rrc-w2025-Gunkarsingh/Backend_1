@@ -5,7 +5,7 @@ export interface PortfolioPerformance {
   percentageChange: number;
   performanceSummary: string;
 }
-
+// Function to calculate portfolio performance
 export function calculatePortfolioPerformance(
   initialInvestment: number,
   currentValue: number
@@ -14,6 +14,7 @@ export function calculatePortfolioPerformance(
   const profitOrLoss = currentValue - initialInvestment;
   const percentageChange = (profitOrLoss / initialInvestment) * 100;
 
+// Determine performance summary based on percentage change
   const performanceSummary =
     percentageChange >= 30
       ? "Excellent performance! Your investments are doing great."
@@ -24,7 +25,8 @@ export function calculatePortfolioPerformance(
       : percentageChange > -10
       ? "Minor loss. Stay calm and review your options."
       : "Significant loss. Review your portfolio strategy.";
-
+      
+// Return the performance metrics
   return {
     initialInvestment,
     currentValue,
