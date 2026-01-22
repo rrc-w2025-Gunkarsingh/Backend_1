@@ -12,5 +12,6 @@ app.get("/", (req, res) => {
  
 app.use("/api/v1", healthRoutes);
 app.use("/api/v1", portfolioRoutes);
+
  
 export default app;
